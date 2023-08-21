@@ -10,13 +10,13 @@ function renderLicenseLink(license) {
     return `No License`
   }
   if (license === "MIT") {
-    return `* [License](#https://opensource.org/license/mit/)`
+    return `* [License](https://opensource.org/license/mit/)`
   }
   if (license === "APACHE 2.0") {
-    return `* [License](#https://www.apache.org/licenses/LICENSE-2.0)`
+    return `* [License](https://www.apache.org/licenses/LICENSE-2.0)`
   }
   if (license === "GPL 3.0") {
-    return `* [License](#https://www.gnu.org/licenses/gpl-3.0.en.html)`
+    return `* [License](https://www.gnu.org/licenses/gpl-3.0.en.html)`
   }
   return ""
 }
