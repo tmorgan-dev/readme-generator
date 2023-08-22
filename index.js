@@ -57,25 +57,25 @@ const questions = [
 
 function writeToFile(fileName, data) {
   const filePath = path.join(fileName)
-    fs.writeFile(filePath, data, (err) =>
-  err ? console.error(err) : console.log(`ReadMe generated! @:${filePath}`)
-);
+  fs.writeFile(filePath, data, (err) =>
+    err ? console.error(err) : console.log(`ReadMe generated! @:${filePath}`)
+  );
 }
 
 function init() {
   console.log("Welcome To your ReadMe generator!")
-    inquirer
-  .prompt(questions)
-  .then((answers) => {
-    console.log("My ReadMe Info",answers)
-    const readMeData = generateMarkdown({...answers})
-    writeToFile("README.md", readMeData)
-  })
-  .catch((error) => {
-    if (error.isTtyError) {
-    } else {
-    }
-  });
+  inquirer
+    .prompt(questions)
+    .then((answers) => {
+      console.log("My ReadMe Info", answers)
+      const readMeData = generateMarkdown({ ...answers })
+      writeToFile("README.md", readMeData)
+    })
+    .catch((error) => {
+      if (error.isTtyError) {
+      } else {
+      }
+    });
 }
 
 init();

@@ -15,6 +15,9 @@
   Run "node index.js" from a bash terminal and fill out the prompts to create the README.md file.
   ![Screenshot 2023-08-21 203444](https://github.com/tmorgan-dev/readme-generator/assets/132379127/bdd5f848-c758-4a8b-91b9-625ea8ac9f5f)
 
+  A video of the usage can be viewed [here](https://github.com/tmorgan-dev/readme-generator/assets/132379127/d75dc7f4-d22a-4ea4-9c8b-40b539a433ce)
+
+
   ## License
   * [License](https://opensource.org/license/mit/)
   This app was licensed under MIT license
