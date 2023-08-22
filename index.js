@@ -1,9 +1,6 @@
 // WHEN I enter contribution guidelines
 // THEN this information is added to the sections of the README
 
-// WHEN I choose a license for my application from a list of options
-// THEN and a notice is added to the README that explains which license the application is covered under
-
 const generateMarkdown = require("./utils/generateMarkdown")
 const fs = require("fs")
 const inquirer = require("inquirer")
@@ -26,10 +23,14 @@ const questions = [
     message: "How do you install your app?",
   },
   {
-    //is it possible to pass a link to an image of the app?
     type: "input",
     name: "usage",
     message: "What is the Usage of your app?",
+  },
+  {
+    type: "input",
+    name: "contributing",
+    message: "In addition to the guidelines listed in Contributor Covenant, do you have any contribution guidelines? Push enter if Not.",
   },
   {
     type: "input",
