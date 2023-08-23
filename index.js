@@ -1,6 +1,3 @@
-// WHEN I enter contribution guidelines
-// THEN this information is added to the sections of the README
-
 const generateMarkdown = require("./utils/generateMarkdown")
 const fs = require("fs")
 const inquirer = require("inquirer")
