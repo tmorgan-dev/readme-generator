@@ -66,7 +66,7 @@ function init() {
     .then((answers) => {
       console.log("My ReadMe Info", answers)
       const readMeData = generateMarkdown({ ...answers })
-      writeToFile("README.md", readMeData)
+      writeToFile("GENERATED_README.md", readMeData)
     })
     .catch((error) => {
       if (error.isTtyError) {
