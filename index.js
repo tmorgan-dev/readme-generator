@@ -1,8 +1,10 @@
+// Importing necessary modules
 const generateMarkdown = require("./utils/generateMarkdown")
 const fs = require("fs")
 const inquirer = require("inquirer")
 const path = require("path")
 
+// Array of questions to be asked during the inquirer prompt
 const questions = [
   {
     type: "input",
@@ -52,6 +54,7 @@ const questions = [
   }
 ];
 
+// Function to write data to a file
 function writeToFile(fileName, data) {
   const filePath = path.join(fileName)
   fs.writeFile(filePath, data, (err) =>
@@ -59,20 +62,27 @@ function writeToFile(fileName, data) {
   );
 }
 
+// Main function to initialize the README generation process
 function init() {
   console.log("Welcome To your ReadMe generator!")
+  // Prompting the user with the questions array
   inquirer
     .prompt(questions)
     .then((answers) => {
       console.log("My ReadMe Info", answers)
+      // Generating markdown content based on user answers
       const readMeData = generateMarkdown({ ...answers })
+      // Writing generated data to a file
       writeToFile("GENERATED_README.md", readMeData)
     })
     .catch((error) => {
       if (error.isTtyError) {
+        // Handle TTY error if needed
       } else {
+        // Handle other errors if needed
       }
     });
 }
 
+// Calling the init function to start the README generation process
 init();
